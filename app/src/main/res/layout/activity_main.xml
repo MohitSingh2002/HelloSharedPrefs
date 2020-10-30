@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/_0"
+        android:textColor="@color/black"
+        android:textSize="100sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/black"
+        android:onClick="changeBackground"
+        android:text="@string/black"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_count"
+        app:layout_constraintEnd_toStartOf="@+id/btn_red"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/grey"
+        android:text="@string/count"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_reset"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/grey"
+        android:text="@string/reset"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_count" />
+
+    <Button
+        android:id="@+id/btn_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/red"
+        android:onClick="changeBackground"
+        android:text="@string/red"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_count"
+        app:layout_constraintEnd_toStartOf="@+id/btn_blue"
+        app:layout_constraintStart_toEndOf="@+id/btn_black" />
+
+    <Button
+        android:id="@+id/btn_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/blue"
+        android:onClick="changeBackground"
+        android:text="@string/blue"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_reset"
+        app:layout_constraintEnd_toStartOf="@+id/btn_yellow"
+        app:layout_constraintStart_toEndOf="@+id/btn_red" />
+
+    <Button
+        android:id="@+id/btn_yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="changeBackground"
+        android:text="@string/yellow"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_blue" />
+</androidx.constraintlayout.widget.ConstraintLayout>
